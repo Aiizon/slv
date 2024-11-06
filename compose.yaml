@@ -20,7 +20,8 @@ services:
     volumes:
         - .:/app:rw,cached
     ports:
-        - "8000:8000"
+        - "8082:80"
+        - "4043:443"
     
 volumes:
   database_data:
