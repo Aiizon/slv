@@ -23,12 +23,12 @@
                         {% if vehicles[i * 3 + j] is defined %}
                             {% set vehicle = vehicles[i * 3 + j] %}
                                 <div class="card col-3 m-2">
-                                    <img src="{{ vehicle.picture }}" class="card-img-top" style="height: 200px; width: 100%" alt="{{ vehicle.model.brand.name }} {{ vehicle.model.name }}">
+                                    <img src="{{ vehicle.picture }}" class="toto card-img-top" alt="{{ vehicle.model.brand.name }} {{ vehicle.model.name }}">
                                     <div class="card-body justify-content-center">
                                         <h5 class="card-title text-center">{{ vehicle.model.brand.name }} {{ vehicle.model.name }}</h5>
                                         <div class="d-flex flex-row justify-content-evenly">
                                             <p class="card-text">Prix: {{ vehicle.daily_rent }}€ /jour</p>
-                                            <a href="{{ path('vehicle', {'id': vehicle.id}) }}" class="btn btn-primary">Voir</a>
+                                            <a href="{{ path('vehicle', {'id': vehicle.id}) }}" class="btn btn-primary"><i class="bi bi-eye"></i> Voir</a>
                                         </div>
                                     </div>
                                 </div>
